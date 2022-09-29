@@ -1,12 +1,11 @@
-from email.mime import image
-from turtle import title
-from urllib import response
+
 from django.shortcuts import render
 import requests
 from bs4 import BeautifulSoup
 from . models import Book,Jobs,News
 
-
+def Csv_format(request,*args,**Kwargs):
+    return
 
 
 def index(request):

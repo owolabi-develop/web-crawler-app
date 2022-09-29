@@ -24,6 +24,10 @@ class Jobs(models.Model):
     company = models.CharField(max_length=255,blank=True,null=True)
     desc = models.TextField(max_length=255,blank=True,null=True)
     country = models.CharField(max_length=255,blank=True,null=True)
+    date_posted = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['date_posted']
 
     def __str__(self) -> str:
         return self.title
