@@ -6,6 +6,7 @@ from . models import Book,Jobs,News
 from django.http import HttpResponse
 import csv
 
+
 def Csv_format(request):
     response = HttpResponse(
         content_type='text/csv',

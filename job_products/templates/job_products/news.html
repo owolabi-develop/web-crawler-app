@@ -2,7 +2,7 @@
 {% block title %}Daily...Thoughts | News{% endblock title %}
 {% block content-holder %}
 <div class="export-container">
-    <div class="data-btn">Export Data: &nbsp; &nbsp;<button><a href="{% url 'crawler:News-Csv-format' %}">CSV</a></button> <button><a href="">JSON</a></button></div>
+    <div class="data-btn">Export Data: &nbsp; &nbsp;<button><a href="{% url 'crawler:News-Csv-format' %}">CSV</a></button></div>
 </div>
 {% if object_list %}
 {% for objects in object_list  %}
