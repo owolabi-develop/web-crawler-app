@@ -3,9 +3,46 @@ from django.shortcuts import render
 import requests
 from bs4 import BeautifulSoup
 from . models import Book,Jobs,News
+from django.http import HttpResponse
+import csv
 
-def Csv_format(request,*args,**Kwargs):
-    return
+def Csv_format(request):
+    response = HttpResponse(
+        content_type='text/csv',
+        headers={'Content-Disposition': 'attachment; filename="jobs.csv"'},
+    )
+    jobs_data = Jobs.objects.all()
+    writer = csv.writer(response)
+    writer.writerow(['Title',"Url",'Company','Country location','looking For',])
+    for data in jobs_data:
+        writer.writerow([data.title,data.url,data.company,data.country,data.desc])  
+    return response
+
+def News_Csv_format(request):
+    response = HttpResponse(
+        content_type='text/csv',
+        headers={'Content-Disposition': 'attachment; filename="News.csv"'},
+    )
+    News_data = News.objects.all()
+    writer = csv.writer(response)
+    writer.writerow(['Headlines',"Url",'Image','Date'])
+    for data in News_data:
+        writer.writerow([data.headline,data.url,data.image,data.date_posted])  
+    return response
+
+
+def Books_Csv_format(request):
+    response = HttpResponse(
+        content_type='text/csv',
+        headers={'Content-Disposition': 'attachment; filename="Books.csv"'},
+    )
+    Books_data = Book.objects.all()
+    writer = csv.writer(response)
+    writer.writerow(['Title',"Url",'Price','Image'])
+    for data in Books_data:
+        writer.writerow([data.title,data.url,data.price,data.image])  
+    return response
+
 
 
 def index(request):
