@@ -1,0 +1,20 @@
+{% extends 'job_products/base.html' %}
+{% block title %}Daily...Thoughts | Latest Books{% endblock title %}
+{% block content-holder %}
+<div class="export-container">
+    <div class="data-btn">Export Data: &nbsp; &nbsp;<button><a href="">CSV</a></button> <button><a href="">JSON</a></button></div>
+</div>
+{% if book %}
+{% for objects in book %}
+
+<div class="News_content-holder">
+    <img src="http://books.toscrape.com/{{objects.image}}">
+    <a href="http://books.toscrape.com/{{objects.url}}"><p style="text-align: center; font-size:18px">{{objects.title}}</p></a>
+    <br/>
+    <p align="center">{{objects.price}}<p/>
+
+
+</div>
+{% endfor %}
+{% endif %}
+{% endblock content-holder %}

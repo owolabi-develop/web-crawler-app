@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Daily...Thoughts{% endblock title %}</title>
+    <link rel="stylesheet" href=" {% static 'job_products/main.css' %}">
+    <script src=" {% static 'job_products/main.js' %}"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/18de66c05e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <!--- wrapper header-->
+    <div class="wrapper">
+       <div class="header-menu">
+        <div class="logo">Daily...<br> Thoughts<i class="fa-brands fa-neos"></i></div>
+    
+        <div class="menu">
+           <a href="{% url 'crawler:news' %}"> <i class="fa-brands fa-neos"> </i>Latest News Reports </i></a>
+           <a href="{% url 'crawler:job' %}">Latest Dev Jobs </i></a>
+           <a href="{% url 'crawler:Book' %}">Latest Novel Books</i></a>
+    
+          
+        </div>
+        
+       </div>
+    <!-- end of menu-->
+    <div class="content-holder">
+{% block content-holder %}
+
+
+{% endblock content-holder %}
+    </div>
+
+
+    <div class="footer">
+        <div>
+            <h4>LET US HELP YOU</h4>
+            <p>Help Center</p>
+            <p>How to get latest Thoughts</p>
+            <p>Delivery options and Timelines</p>
+            <p>Report a News</p>
+            
+         </div>
+         <div>
+             <h4>ABOUT DAILY THOUGHTS</h4> 
+            <p>About us</p>
+            <p>Terms and Condtions</p>
+            <p>Free Digital Product links</p>
+            <p>Free Books links </p>
+          </div>
+         
+         
+          <div>
+             <h4>JOIN US ON</h4> 
+             
+                 <i class="fa-brands fa-facebook-square"></i>
+                 <i class="fa-brands fa-youtube"></i>
+                 <i class="fa-brands fa-whatsapp"></i>
+                 <i class="fa-brands fa-linkedin"></i>
+                 <i class="fa-brands fa-instagram"></i>
+                 <br>
+          </div>
+         
+         </div>
+         <div class="copyright">
+             
+            <p>Copyright © 2022 DailyThought.com. All rights reserved</p>
+         </div>
+
+    </div>
+
+    </div>
+      <!--- wrapper header-->
+</body>
+</html>

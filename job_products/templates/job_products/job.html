@@ -1,0 +1,31 @@
+{% extends 'job_products/base.html' %}
+{% block title %}Daily...Thoughts | Jobs{% endblock title %}
+{% block content-holder %}
+<div class="export-container">
+    <div class="data-btn">Export Data: &nbsp; &nbsp;<button><a href="">CSV</a></button> <button><a href="">JSON</a></button></div>
+</div>
+<div class="job-container">
+    {% if job %}
+    {% for jobs in job %}
+<div class="job-content">
+    <p style="float:right;">{{jobs.country|truncatewords:'8'}}</p>
+    <a href="{{jobs.url}}"><p><span>New</span>&nbsp;&nbsp; {{jobs.title}}</p></a>
+    <br>
+    <br>
+    <p>Company: &nbsp;&nbsp;{{jobs.company}}</p>
+    <br>
+    <br>
+    {% if jobs.desc %}
+    <p>Looking for: &nbsp;&nbsp;{{jobs.desc}}</p>
+    {% else %}
+    {% endif %}
+    
+    <br>
+    <br>
+    
+</div>
+{% endfor %}
+{% endif %}
+</div>
+
+{% endblock content-holder %}

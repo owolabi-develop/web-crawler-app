@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(247, 249, 251);
+}
+
+.wrapper{
+    width:100%;
+    margin: auto;
+}
+.header-menu{
+    display: flex;
+    width: 100%;
+    flex-flow: nowrap;
+    height: 70px;
+    background:whitesmoke;
+}
+.header-menu > .logo{
+    flex: 20%;
+    padding: 10px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(5, 88, 101, 0.367);
+}
+
+.header-menu > .menu{
+    flex: 80%;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.header-menu > .menu a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 2px 20px;
+    text-align: center;
+    color: rgba(3, 55, 63, 0.367);
+    font-size: 18px;
+}
+.header-menu > .menu a:hover{
+    color: rgba(6, 169, 194, 0.367);
+}
+.content-holder{
+    display: flex;
+    flex-flow: wrap;
+    margin: auto;
+    width: 85%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.content-holder .News_content-holder{
+    margin: 10px;
+    width: 200px; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content-holder .News_content-holder a{
+    text-decoration: none;
+    color: rgba(3, 55, 63, 0.367);
+}
+.content-holder .News_content-holder a:hover{
+    text-decoration: none;
+    color: rgba(8, 154, 176, 0.367);
+}
+
+.content-holder .News_content-holder img{
+    object-fit:cover; 
+    border-radius: 10px;
+    width: 200px;
+}
+.content-holder .job-container{
+    margin: auto;
+    width: 100%;
+    border: 1px solid lightgrey;
+}
+
+.content-holder .job-container .job-content{
+    padding-top:10px;
+    width: 98%;
+    margin: 5px;
+    cursor: pointer;
+   
+}
+.content-holder .job-container .job-content a{
+    text-decoration: none;
+    color: rgba(3, 55, 63, 0.367);
+   
+}
+
+.content-holder .job-container .job-content a:hover{
+    text-decoration: none;
+    color: rgba(4, 88, 101, 0.367);
+   
+}
+.content-holder .job-container .job-content span{
+    padding:10px;
+    width: 100%;
+   background-color: brown;
+   color: aliceblue;
+}
+.content-holder .export-container{
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap;
+   
+}
+.content-holder .export-container .data-btn{
+    flex: 100%;
+    padding: 10px;
+    text-align: right;
+}
+
+.four_wrapper{
+    padding: 10px ;
+    width:80%;
+    margin:auto;
+    text-align: center;
+    color: aliceblue;
+   font-weight: bold;
+   font-style: italic;
+   text-transform: capitalize;
+
+}
+.four_wrapper img{
+    height:560px ;
+    width:100%;
+
+
+}
+
+.content-holder .export-container .data-btn button{
+    text-align: center;
+    padding: 8px 15px;
+    border:none;
+    cursor: pointer;
+    border-radius: 5px;
+    background:linear-gradient(rgba(6, 71, 132, 0.168),rgba(3, 43, 80, 0.168));
+}
+
+.content-holder .export-container .data-btn button:hover{
+    background:linear-gradient(rgba(7, 102, 192, 0.168),rgba(7, 97, 182, 0.168));
+}
+.content-holder .export-container .data-btn button a{
+   text-decoration: none;
+   color: whitesmoke;
+}
+
+.footer{
+    width:100%;
+    background-color:rgb(8, 8, 8);
+    display: flex;
+    flex-flow: wrap;
+    padding: 20px;
+    color: aliceblue;
+   
+}
+.footer div{
+    flex:30%;
+    padding:10px;
+    color: rgba(9, 156, 179, 0.367);
+    margin: 10px;
+    line-height: 40px;
+    
+}
+.fa-brands{
+    padding: 5px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(3, 55, 63, 0.367);
+    cursor: pointer;
+    
+}
+.fa-brands:hover{
+  opacity: 0.7;
+  color:whitesmoke; 
+}
+.copyright{
+    font-size: 12px;
+    width: 100%;
+    background-color: rgb(11, 11, 11);
+    overflow: hidden;
+    color: rgba(9, 156, 179, 0.367);
+    text-align: center;
+    padding: 10px;
+    border-top: solid 1px rgb(141, 139, 139);
+
+}
