@@ -26,10 +26,9 @@ import django_heroku
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-#ALLOWED_HOSTS = ['https://daily-thought.herokuapp.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://daily-thought.herokuapp.com']
 
 
 # Application definition
@@ -80,12 +79,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'crawler',
-        'USER':'owolabi',
-        'PASSWORD':'84563320owo',
-        'HOST':'localhost',
-        'PORT':'3306'
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'crawler',
+        #'USER':'owolabi',
+        #'PASSWORD':'84563320owo',
+        #'HOST':'localhost',
+        #'PORT':'3306'
     }
 }
 
@@ -134,4 +133,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
