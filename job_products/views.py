@@ -84,19 +84,22 @@ def news(request):
     response = requests.get(url)
     soup = BeautifulSoup(response.content,'lxml')
     news_article = soup.find_all('article',limit=20)
-    for articles in news_article:
-        image = articles.img.get('src')
-        url = articles.a.get('href')
-        headline = articles.header.h3.a.string
-        News_data = News()
-        News_data.headline = headline
-        News_data.url = url
-        News_data.image = image
-        News_data.save()
-        object_list = News.objects.all()
-    if headline and url and image in object_list:
-            object_list.delete()
-    object_list = News.objects.all()[:20]
+    try:
+        for articles in news_article:
+            image = articles.img.get('src')
+            url = articles.a.get('href')
+            headline = articles.header.h3.a.string
+            News_data = News()
+            News_data.headline = headline
+            News_data.url = url
+            News_data.image = image
+            News_data.save()
+            object_list = News.objects.all()
+        if headline and url and image in object_list:
+                object_list.delete()
+        object_list = News.objects.all()[:20]
+    except:
+        pass
     
     return render(request,'job_products/news.html',{'object_list':object_list})
 
